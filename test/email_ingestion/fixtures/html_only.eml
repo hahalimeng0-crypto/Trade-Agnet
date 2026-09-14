@@ -1,0 +1,8 @@
+From: Buyer <buyer@example.invalid>
+To: sales@example.invalid
+Subject: =?UTF-8?B?UkZRIOa1i+ivlQ==?=
+Message-ID: <rfq-002@example.invalid>
+MIME-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+<html><style>.x{display:none}</style><script>alert('x')</script><body><p>Please quote 20 kg copper wire.</p><img src="https://tracker.invalid/pixel"></body></html>

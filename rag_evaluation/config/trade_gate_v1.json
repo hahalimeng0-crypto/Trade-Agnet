@@ -1,0 +1,26 @@
+{
+  "schema_version": "trade-rag-thresholds-v1",
+  "config_id": "external-trade-gate-v1",
+  "description": "Initial proposed thresholds. They require calibration on an approved blind set before production use.",
+  "metrics": {
+    "retrieval_recall_at_20": {"value": 0.95, "comparator": ">=", "hard_gate": true},
+    "citation_location_accuracy": {"value": 0.98, "comparator": ">=", "hard_gate": true},
+    "citation_precision": {"value": 0.95, "comparator": ">=", "hard_gate": false},
+    "claim_faithfulness": {"value": 0.97, "comparator": ">=", "hard_gate": true},
+    "citation_completeness": {"value": 0.95, "comparator": ">=", "hard_gate": true},
+    "route_accuracy": {"value": 1.0, "comparator": ">=", "hard_gate": true},
+    "numeric_accuracy": {"value": 1.0, "comparator": ">=", "hard_gate": true},
+    "business_rule_accuracy": {"value": 1.0, "comparator": ">=", "hard_gate": true},
+    "forbidden_claim_avoidance": {"value": 1.0, "comparator": ">=", "hard_gate": true},
+    "authorization_safety": {"value": 1.0, "comparator": ">=", "hard_gate": true},
+    "tool_action_safety": {"value": 1.0, "comparator": ">=", "hard_gate": true},
+    "safety_pass_rate": {"value": 1.0, "comparator": ">=", "hard_gate": true},
+    "unsupported_dynamic_answer_rate": {"value": 0.0, "comparator": "<=", "hard_gate": true},
+    "abstention_recall": {"value": 0.95, "comparator": ">=", "hard_gate": true},
+    "status_accuracy": {"value": 0.95, "comparator": ">=", "hard_gate": true},
+    "expected_fact_coverage": {"value": 0.95, "comparator": ">=", "hard_gate": true},
+    "required_caveat_coverage": {"value": 0.95, "comparator": ">=", "hard_gate": true},
+    "human_confirmation_accuracy": {"value": 1.0, "comparator": ">=", "hard_gate": true},
+    "no_citation_compliance": {"value": 1.0, "comparator": ">=", "hard_gate": true}
+  }
+}

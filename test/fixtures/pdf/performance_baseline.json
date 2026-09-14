@@ -1,0 +1,17 @@
+{
+  "schema_version": "pdf-m6-local-performance-gate-v1",
+  "scope": "synthetic local pdfplumber plus Mock Embedding and in-memory stores",
+  "memory_scope": "parent Python allocations measured by tracemalloc; parser child RSS excluded",
+  "production_slo": false,
+  "measured_on": "2026-07-25",
+  "measured_rows": [
+    {"pages": 20, "parse_ms": 871.142, "index_ms": 107.589, "python_peak_bytes": 354587},
+    {"pages": 100, "parse_ms": 1576.105, "index_ms": 85.999, "python_peak_bytes": 502418},
+    {"pages": 300, "parse_ms": 3322.916, "index_ms": 184.921, "python_peak_bytes": 1388795}
+  ],
+  "regression_ceilings": [
+    {"pages": 20, "parse_ms": 5000, "index_ms": 1000, "python_peak_bytes": 16777216},
+    {"pages": 100, "parse_ms": 10000, "index_ms": 2000, "python_peak_bytes": 33554432},
+    {"pages": 300, "parse_ms": 30000, "index_ms": 5000, "python_peak_bytes": 67108864}
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:nanoclaw:rfq-v2",
+  "title": "NanoClaw RFQ v2",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["customer", "country", "items", "delivery_deadline", "trade_term", "missing_fields", "warnings"],
+  "$defs": {
+    "field": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["value", "status", "evidence"],
+      "properties": {
+        "value": {},
+        "status": {"enum": ["header_confirmed", "extracted", "pending_confirmation", "human_confirmed"]},
+        "evidence": {"type": "string"}
+      }
+    },
+    "quantity": {
+      "allOf": [{"$ref": "#/$defs/field"}],
+      "properties": {"value": {"type": ["number", "null"], "exclusiveMinimum": 0}, "unit": {"type": ["string", "null"]}}
+    }
+  },
+  "properties": {
+    "customer": {
+      "type": "object", "additionalProperties": false, "required": ["name", "company", "email"],
+      "properties": {"name": {"$ref": "#/$defs/field"}, "company": {"$ref": "#/$defs/field"}, "email": {"$ref": "#/$defs/field"}}
+    },
+    "country": {"$ref": "#/$defs/field"},
+    "items": {
+      "type": "array", "minItems": 1,
+      "items": {"type": "object", "additionalProperties": false, "required": ["product", "specification", "quantity"],
+        "properties": {"product": {"$ref": "#/$defs/field"}, "specification": {"$ref": "#/$defs/field"}, "quantity": {"$ref": "#/$defs/quantity"}}}
+    },
+    "delivery_deadline": {"type": "object"}, "trade_term": {"type": "object"},
+    "missing_fields": {"type": "array", "items": {"type": "string"}},
+    "warnings": {"type": "array", "items": {"type": "string"}}
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "schema_version": "pdf-fixtures-v1",
+  "description": "Synthetic, de-identified PDF inputs for the NanoClaw M0 contract. Files are generated in temporary directories and are never business documents.",
+  "generator": "test/trade_rag/pdf_fixture_factory.py",
+  "cases": [
+    {
+      "id": "text_english",
+      "category": "text",
+      "description": "Two-page English trade guide with searchable terms.",
+      "build": {"kind": "text", "pages": [["Trade Knowledge Guide", "DDP Madrid requires an agreed delivery scope."], ["Incoterms", "FOB Shanghai transfers risk at the named port."]]},
+      "expected": {"route": "index", "pages": 2, "needs_ocr": false, "required_terms": ["DDP Madrid", "FOB Shanghai"]}
+    },
+    {
+      "id": "text_bilingual",
+      "category": "bilingual",
+      "description": "Two-page Chinese and English trade terminology fixture.",
+      "build": {"kind": "text", "pages": [["中英贸易知识", "FOB 上海，装运港船上交货。"], ["Bilingual Terms", "MOQ means minimum order quantity."]]},
+      "expected": {"route": "index", "pages": 2, "needs_ocr": false, "required_terms": ["中英贸易知识", "minimum order quantity"]}
+    },
+    {
+      "id": "table_units",
+      "category": "table",
+      "description": "Table-like rows retaining headers, units and conditions.",
+      "build": {"kind": "text", "pages": [["Freight Table", "Destination | Lead time | Unit", "Madrid | 12 | days", "Hamburg | 10 | days"], ["Conditions", "Lead time excludes customs inspection."]]},
+      "expected": {"route": "index", "pages": 2, "needs_ocr": false, "required_terms": ["Destination", "days", "customs inspection"]}
+    },
+    {
+      "id": "two_column",
+      "category": "layout",
+      "description": "Two-column page used to verify reading-order review.",
+      "build": {"kind": "two_column", "left": ["Left column", "Payment terms: T/T."], "right": ["Right column", "Packaging: export carton."]},
+      "expected": {"route": "review_required", "pages": 1, "needs_ocr": false, "warning_codes": ["pdf_complex_layout_review"], "required_terms": ["Payment terms", "export carton"]}
+    },
+    {
+      "id": "repeated_header",
+      "category": "normalization",
+      "description": "Four pages with a deterministic repeated header and footer.",
+      "build": {"kind": "repeated", "page_count": 4, "header": "NANOCLAW TRADE GUIDE", "footer": "Internal fixture", "body_prefix": "Unique page guidance"},
+      "expected": {"route": "index", "pages": 4, "needs_ocr": false, "warning_codes": ["pdf_repeated_header_removed", "pdf_repeated_footer_removed"], "required_terms": ["Unique page guidance"]}
+    },
+    {
+      "id": "scanned_only",
+      "category": "ocr",
+      "description": "Three image-like pages with no text objects.",
+      "build": {"kind": "scanned", "page_count": 3},
+      "expected": {"route": "needs_ocr", "pages": 3, "needs_ocr": true, "error_code": "pdf_needs_ocr", "warning_codes": ["pdf_empty_page"]}
+    },
+    {
+      "id": "mixed_text_scan",
+      "category": "ocr",
+      "description": "Four pages alternating extractable text and image-only content.",
+      "build": {"kind": "mixed", "page_count": 4},
+      "expected": {"route": "review_required", "pages": 4, "needs_ocr": false, "warning_codes": ["pdf_partial_text_coverage"], "required_terms": ["Extractable page"]}
+    },
+    {
+      "id": "encrypted",
+      "category": "security",
+      "description": "Encrypted PDF; the fixture password is synthetic and parser input must not request it.",
+      "build": {"kind": "encrypted", "page_count": 1, "password": "fixture-password"},
+      "expected": {"route": "reject", "pages": 1, "needs_ocr": false, "error_code": "pdf_encrypted"}
+    },
+    {
+      "id": "malformed",
+      "category": "security",
+      "description": "Truncated PDF signature and invalid object graph.",
+      "build": {"kind": "malformed"},
+      "expected": {"route": "reject", "pages": null, "needs_ocr": false, "error_code": "pdf_parse_failed"}
+    },
+    {
+      "id": "page_limit",
+      "category": "limits",
+      "description": "One page beyond the M0 default page limit.",
+      "build": {"kind": "blank", "page_count": 301},
+      "expected": {"route": "reject", "pages": 301, "needs_ocr": false, "error_code": "pdf_page_limit_exceeded"}
+    },
+    {
+      "id": "size_limit",
+      "category": "limits",
+      "description": "Valid one-page PDF padded one byte beyond the M0 default byte limit.",
+      "build": {"kind": "oversized", "size_bytes": 20971521},
+      "expected": {"route": "reject", "pages": 1, "needs_ocr": false, "error_code": "file_too_large"}
+    }
+  ]
+}

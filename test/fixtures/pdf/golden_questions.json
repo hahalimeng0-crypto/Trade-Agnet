@@ -1,0 +1,55 @@
+{
+  "schema_version": "pdf-golden-v1",
+  "description": "Synthetic, de-identified M6 retrieval and citation gate. expected_document_case points to the generated fixture, never to enterprise data.",
+  "thresholds": {
+    "recall_at_30": 0.95,
+    "page_location_rate": 1.0,
+    "fact_citation_coverage": 1.0,
+    "acl_block_rate": 1.0,
+    "withdrawal_hit_rate": 0.0
+  },
+  "questions": [
+    {
+      "id": "GQ-001",
+      "query": "What delivery scope is required for DDP Madrid?",
+      "expected_document_case": "text_english",
+      "expected_page": 1,
+      "required_terms": ["DDP Madrid", "delivery scope"]
+    },
+    {
+      "id": "GQ-002",
+      "query": "FOB Shanghai risk named port",
+      "expected_document_case": "text_english",
+      "expected_page": 2,
+      "required_terms": ["FOB Shanghai", "named port"]
+    },
+    {
+      "id": "GQ-003",
+      "query": "MOQ means minimum order quantity",
+      "expected_document_case": "text_bilingual",
+      "expected_page": 2,
+      "required_terms": ["MOQ", "minimum order quantity"]
+    },
+    {
+      "id": "GQ-004",
+      "query": "FOB 上海 装运港船上交货",
+      "expected_document_case": "text_bilingual",
+      "expected_page": 1,
+      "required_terms": ["FOB 上海", "装运港船上交货"]
+    },
+    {
+      "id": "GQ-005",
+      "query": "Madrid lead time days",
+      "expected_document_case": "table_units",
+      "expected_page": 1,
+      "required_terms": ["Madrid", "12", "days"]
+    },
+    {
+      "id": "GQ-006",
+      "query": "Does the lead time include customs inspection?",
+      "expected_document_case": "table_units",
+      "expected_page": 2,
+      "required_terms": ["excludes customs inspection"]
+    }
+  ]
+}

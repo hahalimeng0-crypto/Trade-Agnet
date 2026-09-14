@@ -1,0 +1,24 @@
+From: Gold Buyer 25 <buyer25@example.invalid>
+To: sales@example.invalid
+Subject: Dangerous attachment
+Message-ID: <gold-rfq-25@example.invalid>
+Date: Sat, 25 Jul 2026 08:25:00 +0000
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="===============0776705686060611762=="
+
+--===============0776705686060611762==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+Please quote 900 pcs safety goggles, clear anti-fog lens. Delivery to Chile. =
+CFR Valparaiso.
+
+--===============0776705686060611762==
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="unsafe-demo.exe"
+MIME-Version: 1.0
+
+TVogc2ltdWxhdGVkIGV4ZWN1dGFibGU=
+
+--===============0776705686060611762==--

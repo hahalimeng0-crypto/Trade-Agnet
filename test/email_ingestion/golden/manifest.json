@@ -1,0 +1,729 @@
+{
+  "schema_version": "gold-v1",
+  "count": 40,
+  "cases": [
+    {
+      "case_id": "G01",
+      "file": "gold_01.eml",
+      "title": "Single speaker RFQ",
+      "item_count": 1,
+      "evidence": [
+        "Bluetooth speakers",
+        "1,000 pcs",
+        "black, IPX7",
+        "Germany",
+        "before 15 September",
+        "FOB Shenzhen"
+      ],
+      "pending_fields": [],
+      "format": "plain",
+      "contains_attachment": false
+    },
+    {
+      "case_id": "G02",
+      "file": "gold_02.eml",
+      "title": "Two product inquiry",
+      "item_count": 2,
+      "evidence": [
+        "USB-C chargers",
+        "500 sets",
+        "EU plug",
+        "braided USB-C cables",
+        "800 pcs",
+        "2 metres",
+        "France",
+        "CIF Marseille"
+      ],
+      "pending_fields": [],
+      "format": "plain",
+      "contains_attachment": false
+    },
+    {
+      "case_id": "G03",
+      "file": "gold_03.eml",
+      "title": "HTML solar lights",
+      "item_count": 1,
+      "evidence": [
+        "solar garden lights",
+        "240 cartons",
+        "warm white, 12 units per carton",
+        "Spain",
+        "DDP Madrid"
+      ],
+      "pending_fields": [],
+      "format": "html",
+      "contains_attachment": false
+    },
+    {
+      "case_id": "G04",
+      "file": "gold_04.eml",
+      "title": "Missing quantity",
+      "item_count": 1,
+      "evidence": [
+        "stainless steel water bottles",
+        "750 ml, matte blue",
+        "Canada"
+      ],
+      "pending_fields": [
+        "items[0].quantity",
+        "trade_term",
+        "delivery_deadline"
+      ],
+      "format": "plain",
+      "contains_attachment": false
+    },
+    {
+      "case_id": "G05",
+      "file": "gold_05.eml",
+      "title": "Unit missing",
+      "item_count": 1,
+      "evidence": [
+        "wireless keyboards",
+        "US layout",
+        "United States",
+        "DDP Los Angeles"
+      ],
+      "pending_fields": [
+        "items[0].quantity",
+        "delivery_deadline"
+      ],
+      "format": "plain",
+      "contains_attachment": false
+    },
+    {
+      "case_id": "G06",
+      "file": "gold_06.eml",
+      "title": "Country not stated",
+      "item_count": 1,
+      "evidence": [
+        "LED strips",
+        "2,500 pcs",
+        "5 m, 24 V",
+        "FOB Ningbo"
+      ],
+      "pending_fields": [
+        "country",
+        "delivery_deadline"
+      ],
+      "format": "plain",
+      "contains_attachment": false
+    },
+    {
+      "case_id": "G07",
+      "file": "gold_07.eml",
+      "title": "Do not infer country from domain",
+      "item_count": 1,
+      "evidence": [
+        "conference cameras",
+        "80 sets",
+        "4K with speaker tracking",
+        "EXW Shenzhen"
+      ],
+      "pending_fields": [
+        "country",
+        "delivery_deadline"
+      ],
+      "format": "plain",
+      "contains_attachment": false
+    },
+    {
+      "case_id": "G08",
+      "file": "gold_08.eml",
+      "title": "Ambiguous date",
+      "item_count": 1,
+      "evidence": [
+        "ceramic mugs",
+        "600 pcs",
+        "350 ml, white",
+        "Germany",
+        "before 05/06"
+      ],
+      "pending_fields": [
+        "delivery_deadline",
+        "trade_term"
+      ],
+      "format": "plain",
+      "contains_attachment": false
+    },
+    {
+      "case_id": "G09",
+      "file": "gold_09.eml",
+      "title": "Incoterm without place",
+      "item_count": 1,
+      "evidence": [
+        "cotton tote bags",
+        "1,200 pcs",
+        "natural colour, 180 gsm",
+        "Italy",
+        "FOB"
+      ],
+      "pending_fields": [
+        "trade_term",
+        "delivery_deadline"
+      ],
+      "format": "plain",
+      "contains_attachment": false
+    },
+    {
+      "case_id": "G10",
+      "file": "gold_10.eml",
+      "title": "Place without Incoterm",
+      "item_count": 1,
+      "evidence": [
+        "engineered flooring",
+        "90 pallets",
+        "oak finish, 12 mm",
+        "Netherlands",
+        "by October"
+      ],
+      "pending_fields": [
+        "trade_term",
+        "delivery_deadline"
+      ],
+      "format": "plain",
+      "contains_attachment": false
+    },
+    {
+      "case_id": "G11",
+      "file": "gold_11.eml",
+      "title": "Conflicting quantities",
+      "item_count": 1,
+      "evidence": [
+        "red folding chair",
+        "Poland",
+        "CIF Gdansk"
+      ],
+      "pending_fields": [
+        "items[0].quantity",
+        "delivery_deadline"
+      ],
+      "format": "plain",
+      "contains_attachment": false
+    },
+    {
+      "case_id": "G12",
+      "file": "gold_12.eml",
+      "title": "Conflicting trade terms",
+      "item_count": 1,
+      "evidence": [
+        "desk lamps",
+        "700 pcs",
+        "black aluminium",
+        "Sweden"
+      ],
+      "pending_fields": [
+        "trade_term",
+        "delivery_deadline"
+      ],
+      "format": "plain",
+      "contains_attachment": false
+    },
+    {
+      "case_id": "G13",
+      "file": "gold_13.eml",
+      "title": "Three product RFQ",
+      "item_count": 3,
+      "evidence": [
+        "HDMI switches",
+        "100 pcs",
+        "4-in-1-out",
+        "DisplayPort adapters",
+        "200 pcs",
+        "8K",
+        "laptop stands",
+        "300 sets",
+        "silver aluminium",
+        "Australia",
+        "FOB Shenzhen"
+      ],
+      "pending_fields": [],
+      "format": "plain",
+      "contains_attachment": false
+    },
+    {
+      "case_id": "G14",
+      "file": "gold_14.eml",
+      "title": "Decimal quantity",
+      "item_count": 1,
+      "evidence": [
+        "food-grade citric acid",
+        "2.5 tonnes",
+        "25 kg bags",
+        "Belgium",
+        "CIF Antwerp"
+      ],
+      "pending_fields": [
+        "delivery_deadline"
+      ],
+      "format": "plain",
+      "contains_attachment": false
+    },
+    {
+      "case_id": "G15",
+      "file": "gold_15.eml",
+      "title": "Range quantity",
+      "item_count": 1,
+      "evidence": [
+        "smart door sensors",
+        "white, Zigbee 3.0",
+        "Austria",
+        "DAP Vienna"
+      ],
+      "pending_fields": [
+        "items[0].quantity",
+        "delivery_deadline"
+      ],
+      "format": "plain",
+      "contains_attachment": false
+    },
+    {
+      "case_id": "G16",
+      "file": "gold_16.eml",
+      "title": "MOQ is not quantity",
+      "item_count": 1,
+      "evidence": [
+        "bamboo toothbrushes",
+        "medium bristle",
+        "Denmark"
+      ],
+      "pending_fields": [
+        "items[0].quantity",
+        "trade_term",
+        "delivery_deadline"
+      ],
+      "format": "plain",
+      "contains_attachment": false
+    },
+    {
+      "case_id": "G17",
+      "file": "gold_17.eml",
+      "title": "Price is not quantity",
+      "item_count": 1,
+      "evidence": [
+        "rechargeable fan",
+        "white, 4000 mAh",
+        "Greece"
+      ],
+      "pending_fields": [
+        "items[0].quantity",
+        "trade_term",
+        "delivery_deadline"
+      ],
+      "format": "plain",
+      "contains_attachment": false
+    },
+    {
+      "case_id": "G18",
+      "file": "gold_18.eml",
+      "title": "Lead time",
+      "item_count": 1,
+      "evidence": [
+        "bicycle helmets",
+        "360 pcs",
+        "size M/L, CE marked",
+        "Finland",
+        "within 30 days after deposit",
+        "FCA Shenzhen"
+      ],
+      "pending_fields": [],
+      "format": "plain",
+      "contains_attachment": false
+    },
+    {
+      "case_id": "G19",
+      "file": "gold_19.eml",
+      "title": "Date range",
+      "item_count": 1,
+      "evidence": [
+        "restaurant tables",
+        "72 sets",
+        "walnut top, black steel frame",
+        "Ireland",
+        "between 10 and 20 November 2026",
+        "DDP Dublin"
+      ],
+      "pending_fields": [],
+      "format": "plain",
+      "contains_attachment": false
+    },
+    {
+      "case_id": "G20",
+      "file": "gold_20.eml",
+      "title": "Incoterms version",
+      "item_count": 1,
+      "evidence": [
+        "nitrile gloves",
+        "5,000 pcs",
+        "size L, blue",
+        "Norway",
+        "CIF Oslo, Incoterms 2020",
+        "by 1 December 2026"
+      ],
+      "pending_fields": [],
+      "format": "plain",
+      "contains_attachment": false
+    },
+    {
+      "case_id": "G21",
+      "file": "gold_21.eml",
+      "title": "Reply-To differs",
+      "item_count": 1,
+      "evidence": [
+        "barcode scanners",
+        "150 pcs",
+        "USB, 1D/2D",
+        "Portugal",
+        "DAP Lisbon"
+      ],
+      "pending_fields": [
+        "delivery_deadline"
+      ],
+      "format": "reply_to",
+      "contains_attachment": false
+    },
+    {
+      "case_id": "G22",
+      "file": "gold_22.eml",
+      "title": "Encoded Chinese subject",
+      "item_count": 1,
+      "evidence": [
+        "laboratory mixers",
+        "66 sets",
+        "5 L capacity, 220 V",
+        "Switzerland",
+        "CPT Zurich"
+      ],
+      "pending_fields": [
+        "delivery_deadline"
+      ],
+      "format": "utf8",
+      "contains_attachment": false
+    },
+    {
+      "case_id": "G23",
+      "file": "gold_23.eml",
+      "title": "HTML tracking image",
+      "item_count": 1,
+      "evidence": [
+        "pet collars",
+        "1,800 pcs",
+        "reflective nylon, size M",
+        "Czech Republic",
+        "FOB Xiamen"
+      ],
+      "pending_fields": [
+        "delivery_deadline"
+      ],
+      "format": "html_tracking",
+      "contains_attachment": false
+    },
+    {
+      "case_id": "G24",
+      "file": "gold_24.eml",
+      "title": "Prompt injection text",
+      "item_count": 1,
+      "evidence": [
+        "industrial tablets",
+        "45 sets",
+        "IP67, 10 inch",
+        "Japan",
+        "CIF Yokohama"
+      ],
+      "pending_fields": [
+        "delivery_deadline"
+      ],
+      "format": "plain",
+      "contains_attachment": false
+    },
+    {
+      "case_id": "G25",
+      "file": "gold_25.eml",
+      "title": "Dangerous attachment",
+      "item_count": 1,
+      "evidence": [
+        "safety goggles",
+        "900 pcs",
+        "clear anti-fog lens",
+        "Chile",
+        "CFR Valparaiso"
+      ],
+      "pending_fields": [
+        "delivery_deadline"
+      ],
+      "format": "attachment",
+      "contains_attachment": true
+    },
+    {
+      "case_id": "G26",
+      "file": "gold_26.eml",
+      "title": "Long signature",
+      "item_count": 1,
+      "evidence": [
+        "power banks",
+        "320 pcs",
+        "20,000 mAh, black",
+        "New Zealand",
+        "DDP Auckland"
+      ],
+      "pending_fields": [
+        "delivery_deadline"
+      ],
+      "format": "plain",
+      "contains_attachment": false
+    },
+    {
+      "case_id": "G27",
+      "file": "gold_27.eml",
+      "title": "Subject carries product",
+      "item_count": 1,
+      "evidence": [
+        "electric kettles",
+        "1,100 pcs",
+        "white ABS with UK plug",
+        "United Kingdom",
+        "FCA Guangzhou"
+      ],
+      "pending_fields": [
+        "delivery_deadline"
+      ],
+      "format": "subject_product",
+      "contains_attachment": false
+    },
+    {
+      "case_id": "G28",
+      "file": "gold_28.eml",
+      "title": "Global packaging requirement",
+      "item_count": 2,
+      "evidence": [
+        "red yoga mats",
+        "300 pcs",
+        "6 mm",
+        "blue yoga blocks",
+        "400 pcs",
+        "EVA",
+        "Iceland",
+        "FOB Qingdao"
+      ],
+      "pending_fields": [
+        "delivery_deadline"
+      ],
+      "format": "plain",
+      "contains_attachment": false
+    },
+    {
+      "case_id": "G29",
+      "file": "gold_29.eml",
+      "title": "Two deadlines conflict",
+      "item_count": 1,
+      "evidence": [
+        "POS terminals",
+        "60 sets",
+        "Android 13, NFC",
+        "Mexico",
+        "DDP Mexico City"
+      ],
+      "pending_fields": [
+        "delivery_deadline"
+      ],
+      "format": "plain",
+      "contains_attachment": false
+    },
+    {
+      "case_id": "G30",
+      "file": "gold_30.eml",
+      "title": "Forwarded chain",
+      "item_count": 1,
+      "evidence": [
+        "travel adapters",
+        "universal sockets, white",
+        "Brazil",
+        "CIF Santos"
+      ],
+      "pending_fields": [
+        "items[0].quantity",
+        "delivery_deadline"
+      ],
+      "format": "plain",
+      "contains_attachment": false
+    },
+    {
+      "case_id": "G31",
+      "file": "gold_31.eml",
+      "title": "No specification",
+      "item_count": 1,
+      "evidence": [
+        "paper notebooks",
+        "2,000 pcs",
+        "South Korea",
+        "FOB Shanghai",
+        "before 30 September 2026"
+      ],
+      "pending_fields": [
+        "items[0].specification"
+      ],
+      "format": "plain",
+      "contains_attachment": false
+    },
+    {
+      "case_id": "G32",
+      "file": "gold_32.eml",
+      "title": "No product",
+      "item_count": 1,
+      "evidence": [
+        "1,500 pcs",
+        "Hungary",
+        "DDP Budapest",
+        "before year end"
+      ],
+      "pending_fields": [
+        "items[0].product",
+        "items[0].specification",
+        "delivery_deadline"
+      ],
+      "format": "plain",
+      "contains_attachment": false
+    },
+    {
+      "case_id": "G33",
+      "file": "gold_33.eml",
+      "title": "No business facts",
+      "item_count": 1,
+      "evidence": [],
+      "pending_fields": [
+        "items[0].product",
+        "items[0].specification",
+        "items[0].quantity",
+        "country",
+        "trade_term",
+        "delivery_deadline"
+      ],
+      "format": "plain",
+      "contains_attachment": false
+    },
+    {
+      "case_id": "G34",
+      "file": "gold_34.eml",
+      "title": "Country conflict",
+      "item_count": 1,
+      "evidence": [
+        "air purifiers",
+        "210 pcs",
+        "HEPA H13",
+        "DAP Berlin"
+      ],
+      "pending_fields": [
+        "country",
+        "delivery_deadline"
+      ],
+      "format": "plain",
+      "contains_attachment": false
+    },
+    {
+      "case_id": "G35",
+      "file": "gold_35.eml",
+      "title": "Unit case normalization",
+      "item_count": 1,
+      "evidence": [
+        "portable projectors",
+        "48 SETS",
+        "1080p, 500 ANSI lumens",
+        "UAE",
+        "CIP Dubai"
+      ],
+      "pending_fields": [
+        "delivery_deadline"
+      ],
+      "format": "plain",
+      "contains_attachment": false
+    },
+    {
+      "case_id": "G36",
+      "file": "gold_36.eml",
+      "title": "Thousands separator",
+      "item_count": 1,
+      "evidence": [
+        "ballpoint pens",
+        "12 000 pcs",
+        "blue ink, metal clip",
+        "Saudi Arabia",
+        "CFR Jeddah"
+      ],
+      "pending_fields": [
+        "delivery_deadline"
+      ],
+      "format": "plain",
+      "contains_attachment": false
+    },
+    {
+      "case_id": "G37",
+      "file": "gold_37.eml",
+      "title": "Mixed languages",
+      "item_count": 1,
+      "evidence": [
+        "insulated lunch bags",
+        "420 pcs",
+        "gris, 8 L",
+        "France",
+        "DDP Paris"
+      ],
+      "pending_fields": [
+        "delivery_deadline"
+      ],
+      "format": "utf8",
+      "contains_attachment": false
+    },
+    {
+      "case_id": "G38",
+      "file": "gold_38.eml",
+      "title": "Model numbers",
+      "item_count": 1,
+      "evidence": [
+        "network switches",
+        "144 pcs",
+        "model NS-24G-4S, 24 PoE ports",
+        "Malaysia",
+        "FOB Shenzhen"
+      ],
+      "pending_fields": [
+        "delivery_deadline"
+      ],
+      "format": "plain",
+      "contains_attachment": false
+    },
+    {
+      "case_id": "G39",
+      "file": "gold_39.eml",
+      "title": "Packaging versus quantity",
+      "item_count": 1,
+      "evidence": [
+        "glass food containers",
+        "50 cartons",
+        "24 sets per carton, 3-piece set",
+        "Thailand",
+        "CIF Laem Chabang"
+      ],
+      "pending_fields": [
+        "delivery_deadline"
+      ],
+      "format": "plain",
+      "contains_attachment": false
+    },
+    {
+      "case_id": "G40",
+      "file": "gold_40.eml",
+      "title": "Payment term noise",
+      "item_count": 1,
+      "evidence": [
+        "smart watches",
+        "888 pcs",
+        "black, 1.8 inch display",
+        "Türkiye",
+        "FCA Shenzhen",
+        "before 18 October 2026"
+      ],
+      "pending_fields": [],
+      "format": "plain",
+      "contains_attachment": false
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "mode": "offline",
+  "case_count": 40,
+  "manifest_count": 40,
+  "mime_success_rate": 1.0,
+  "evidence_backreference_rate": 1.0,
+  "unique_message_ids": 40,
+  "attachment_cases": 1,
+  "first_pass_created": 40,
+  "duplicate_pass_created": 0,
+  "passed": true,
+  "failures": []
+}

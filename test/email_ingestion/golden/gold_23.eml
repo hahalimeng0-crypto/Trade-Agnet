@@ -1,0 +1,13 @@
+From: Gold Buyer 23 <buyer23@example.invalid>
+To: sales@example.invalid
+Subject: HTML tracking image
+Message-ID: <gold-rfq-23@example.invalid>
+Date: Thu, 23 Jul 2026 08:23:00 +0000
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+<html><style>.hidden{display:none}</style><script>bad()</script><body><p>We r=
+equest 1,800 pcs pet collars, reflective nylon, size M. Delivery to Czech Rep=
+ublic. FOB Xiamen.</p><img src=3D"https://tracker.example.invalid/pixel"></bo=
+dy></html>
