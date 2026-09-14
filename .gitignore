@@ -1,0 +1,63 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+.pytest_cache/
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+.uv-cache/
+
+# Local editor and disposable test/runtime artifacts
+.idea/
+.tmp/
+
+# PaddleX runtime cache. Keep only the three OCR models required for offline
+# delivery; ignore server models, download locks, temporary files and caches.
+.paddlex/*
+!.paddlex/official_models/
+.paddlex/official_models/*
+!.paddlex/official_models/PP-OCRv5_mobile_det/
+!.paddlex/official_models/PP-OCRv5_mobile_det/**
+!.paddlex/official_models/PP-OCRv5_mobile_rec/
+!.paddlex/official_models/PP-OCRv5_mobile_rec/**
+!.paddlex/official_models/PP-LCNet_x1_0_textline_ori/
+!.paddlex/official_models/PP-LCNet_x1_0_textline_ori/**
+
+# Local credentials and runtime data
+.env
+.env.*
+!.env.example
+!.env.production.example
+!deploy/docker/.env.example
+deploy/docker/.env
+data/*.dpapi.json
+botpy.log*
+workspace/sessions/*.jsonl
+workspace/customer_sessions/*.jsonl
+workspace/peer_sessions/*.jsonl
+workspace/runtime/
+workspace/internal_agent/
+workspace/browser-acceptance/
+workspace/browser-check.*.log
+workspace/memory/HISTORY.md
+workspace/knowledge_base/
+
+# Source repository: exclude local models and all live business/session data
+/.paddlex/
+/workspace/
+/agent/business/data/
+/data/
+*.db
+*.db-wal
+*.db-shm
+*.db-journal
+*.sqlite
+*.sqlite3
+*.sqlite-wal
+*.sqlite-shm
+*.sqlite3-wal
+*.sqlite3-shm
